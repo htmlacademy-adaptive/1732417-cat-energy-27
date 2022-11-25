@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи»
 
 * Студент: [Дмитрий Камшилов](https://up.htmlacademy.ru/adaptive/27/user/1732417).
-* Наставник: `Ярослав Шевцов. (https://htmlacademy.ru/profile/redx)`.
+* Наставник: Ярослав Шевцов. (https://htmlacademy.ru/profile/redx).
 
 ---
 
