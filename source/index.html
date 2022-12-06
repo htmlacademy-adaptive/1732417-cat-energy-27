@@ -4,6 +4,8 @@
 <head>
   <meta charset="utf-8" />
   <title>HTML Academy: Кэт энерджи</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body class="page__body">
@@ -11,22 +13,21 @@
     <div class="main-header__wrapper">
       <div class="wrapper-logo">
         <a class="logo" href="#">
-          <img src="../source/images/header/cat-logo-mobile.svg" alt="Логотип Cat Energy" />
+          <img class="main-header__logo" src="images/header/cat-logo-mobile.svg" width="191" height="38"
+            alt="Логотип Cat Energy" />
         </a>
-        <a class="logo-text" href="#">
-          <img src="../source/images/header/cat-logo-text.svg" alt="Cat Energy" />
-        </a>
+
       </div>
       <nav class="main-nav">
-        <ul class="nav-list">
-          <li class="nav-item nav-link--current">
-            <a class="nav-link" href="#">Главная</a>
+        <ul class="main-nav__list">
+          <li class="main-nav__item main-nav__link--current">
+            <a class="main-nav__link" href="index.html">Главная</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="catalog.html">Каталог продукции</a>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="form.html">Подбор программы</a>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="form.html">Подбор программы</a>
           </li>
         </ul>
       </nav>
@@ -127,16 +128,22 @@
         <div class="example__picture">
           <ul class="example__list">
             <li class="example__item">
-              <img src="" alt="Фото кота до похудения" />
+              <img src="images/main/fat-cat-image.png" alt="Фото кота до похудения" />
             </li>
             <li class="example__item">
-              <img src="" alt="Фото кота после похудения" />
+              <img src="images/main/skinny-cat-image.png" alt="Фото кота после похудения" />
             </li>
           </ul>
+          <div class="exapmle__range-wrapper">
+            <input class="example__range-scale" type="range" id="range" min="1" max="100" value="50">
+            <button class="example__btn-slider"></button>
+          </div>
         </div>
       </div>
     </section>
+  </main>
 
+  <footer class="main-footer">
     <section class="address">
       <h2 class="visually-hidden">Контакты для сотрудничества</h2>
       <div class="address__wrapper">
@@ -146,23 +153,21 @@
             дилеров!
           </strong>
           <address class="partnership__address">
-            ул. Большая Конюшенная, д. 19/8 Санкт-Петербург
+            ул. Большая <br> Конюшенная, д. 19/8 Санкт-Петербург
           </address>
         </div>
         <iframe class="address__map"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533248!2d30.320858716344713!3d59.93871648187619!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1669199079262!5m2!1sru!2sru"
-          width="600" height="400" style="border: 0" allowfullscreen="" loading="lazy"
+          width="320" height="362" style="border: 0;" allowfullscreen="" loading="lazy"
           referrerpolicy="no-referrer-when-downgrade">
         </iframe>
       </div>
     </section>
-  </main>
 
-  <footer class="main-footer">
     <div class="main-footer__wrapper">
       <div class="main-footer__logo logo-footer">
         <a href="#" class="logo-footer__link">
-          <img src="../source/images/header/cat-logo-text.svg" alt="Cat energy." />
+          <img src="images/footer/footer-catenergy-text.svg" alt="Cat energy." width="128" height="24" />
         </a>
       </div>
       <div class="main-footer__social social">
