@@ -1,29 +1,65 @@
 .products {
-  margin-bottom: 19px;
+  @media (min-width: @tablet-width) {
+    background-color: #f2f2f2;
+  }
 }
 
 .products__card {
   display: grid;
   grid-template-columns: 1fr 1fr;
+
+  @media (min-width: @tablet-width) {
+    position: relative;
+    margin-bottom: 33px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+}
+
+.products__info {
+  @media (min-width: @tablet-width) {
+    margin-top: 161px;
+  }
 }
 
 .products__item-button {
-  grid-column-start: 1;
-  grid-column-end: -1;
+  display: block;
+  text-align: center;
   font-size: 16px;
   line-height: 20px;
-}
-
-.products__info-link {
   text-decoration: none;
 }
 
+.products__info-link {
+  display: block;
+  max-width: 77px;
+  text-decoration: none;
+
+  @media (min-width: @tablet-width) {
+    max-width: 174px;
+    padding: 0 20px;
+    margin: 0 auto 21px;
+    text-align: center;
+  }
+}
+
 .products__title {
+  margin: 0;
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
   color: #222222;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  @media (min-width: @desktop-width) {
+    line-height: 21px;
+  }
 }
 
 .products__info-list {
@@ -33,4 +69,50 @@
   font-size: 12px;
   line-height: 16px;
   color: #444444;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    margin: 0;
+    grid-row-gap: 16px;
+  }
+}
+
+.products__info-value {
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    border-bottom: 1px solid #cdcdcd;
+    text-align: right;
+    padding-bottom: 9px;
+  }
+}
+
+.products__img {
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.products__img-tablet {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+  }
+}
+
+.products__info-category {
+  @media (min-width: @tablet-width) {
+    border-bottom: 1px solid #cdcdcd;
+    padding-bottom: 9px;
+  }
+}
+
+.products__image-link {
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    align-self: center;
+    top: -13%;
+  }
 }

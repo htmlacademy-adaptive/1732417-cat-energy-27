@@ -7,10 +7,27 @@
   font-weight: 400;
   font-size: 36px;
   line-height: 36px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 0 54px 70px;
+    font-size: 60px;
+    line-height: 60px;
+  }
 }
 
 .form__wrapper {
   margin-bottom: 45px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 110px;
+  }
 }
 
 .form__text {
@@ -18,21 +35,51 @@
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 0 60px 70px;
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .form__list {
   display: flex;
   flex-direction: column;
   list-style-type: none;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+    margin: 0 67px 0 71px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-width: 568px;
+    margin: 0;
+  }
 }
 
 .form__list--cat-info {
   margin-bottom: 46px;
   row-gap: 14px;
+
+  @media (min-width: @tablet-width) {
+    row-gap: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+  }
 }
 
 .form__list--cat-diet {
   row-gap: 13px;
+
+  @media (min-width: @tablet-width) {
+    padding: 25px 28px;
+    row-gap: 18px;
+    border: 1px solid #e7e7e7;
+  }
 }
 
 .form__item-label {
@@ -40,10 +87,29 @@
   align-items: center;
   text-transform: uppercase;
   color: #444444;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-width: 50%;
+  }
+}
+
+.form__item-label--email {
+  @media (min-width: @desktop-width) {
+    margin-right: 78px;
+  }
 }
 
 .form__item-text {
   margin-right: 13px;
+
+  @media (min-width: @tablet-width) {
+    white-space: nowrap;
+  }
 }
 
 .form_type-field {
@@ -54,6 +120,10 @@
   line-height: 18px;
   text-transform: uppercase;
   color: #444444;
+
+  @media (min-width: @tablet-width) {
+    width: 100%;
+  }
 }
 
 .form__contacts-title {
@@ -64,10 +134,23 @@
   display: flex;
   flex-direction: column;
   row-gap: 14px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 66px 0 70px;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+  }
 }
 
 .form__item-contacts {
   margin-right: 10px;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 20px;
+    white-space: nowrap;
+  }
 }
 
 .form_type-field--contacts {
@@ -76,25 +159,43 @@
 
 .form__contacts {
   margin-bottom: 24px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 65px;
+  }
 }
 
 .form__comment {
   margin-bottom: 23px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 65px;
+  }
 }
 
 .form__comment-title {
   margin-bottom: 37px;
 }
 
+.form__comment-label {
+  @media (min-width: @tablet-width) {
+    margin-left: 70px;
+  }
+}
+
 .form__extra {
   margin-bottom: 34px;
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 61px;
+  }
 }
 
 .form__extra-title {
   margin-bottom: 34px;
 }
 
-.form_type-field-comment {
+.form__comment-label-field-comment {
   min-height: 150px;
   padding: 9px 12px 9px 15px;
   border: 0;
@@ -105,6 +206,10 @@
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
+
+  @media (min-width: @desktop-width) {
+    width: 100%;
+  }
 }
 
 .form__extra-list {
@@ -112,21 +217,51 @@
   flex-direction: column;
   row-gap: 13px;
   list-style-type: none;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+    margin: 0 165px 0 70px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 32px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .form__extra-item {
   text-transform: uppercase;
 }
 
-.form__button {
+.form__extra-container {
+  @media (min-width: @tablet-width) {
+    margin-left: 70px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.form__extra-container-button {
   margin-bottom: 21px;
   padding: 7px 44px;
   width: 100%;
   font-size: 16px;
   line-height: 20px;
+
+  @media (min-width: @tablet-width) {
+    width: auto;
+    margin-bottom: 0;
+  }
 }
 
-.form__important-fields {
+.form__extra-container-fields {
+  margin: 0;
   text-align: center;
   font-size: 14px;
   line-height: 16px;

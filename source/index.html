@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Кэт энерджи</title>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css" />
@@ -11,17 +12,24 @@
 <body class="page__body">
   <header class="main-header">
     <div class="main-header__wrapper">
-      <div class="wrapper-logo">
-        <a class="logo" href="#">
-          <img class="main-header__logo" src="images/header/cat-logo-mobile.svg" width="191" height="38"
-            alt="Логотип Cat Energy" />
+      <div class="main-header__wrapper-logo logo">
+        <a class="main-header__logo logo__mobile" href="#">
+          <img src="images/header/cat-logo-mobile.svg" width="191" height="38" alt="Логотип Cat Energy" />
         </a>
-
+        <a class="main-header__logo logo__tablet" href="#">
+          <img src="images/header/cat-logo-tablet.svg" width="174" height="52" alt="Логотип Cat Energy" />
+        </a>
+        <a class="main-header__logo logo__desktop" href="#">
+          <img src="images/header/cat-logo-desktop.svg" width="202" height="59" alt="Логотип Cat Energy" />
+        </a>
       </div>
       <nav class="main-nav">
+        <button class="main-nav__toggle" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
         <ul class="main-nav__list">
-          <li class="main-nav__item main-nav__link--current">
-            <a class="main-nav__link" href="index.html">Главная</a>
+          <li class="main-nav__item">
+            <a class="main-nav__link main-nav__link--current" href="index.html">Главная</a>
           </li>
           <li class="main-nav__item">
             <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
@@ -50,22 +58,34 @@
         <div class="program__weight program__weight--slim">
           <h3 class="program__title">Похудение</h3>
           <p class="program__description">
-            Ваш кот весит больше собаки и почти<br />
-            утратил способность лазить по деревьям?<br />
-            Пора на диету! Cat Energy Slim поможет<br />
+            Ваш кот весит больше собаки и почти
+            утратил способность лазить по деревьям?
+            Пора на диету! Cat Energy Slim поможет
             вашему питомцу сбросить лишний вес.
           </p>
-          <a class="program__link" href="">каталог slim</a>
+          <a class="program__link" href="">каталог slim
+            <svg class="program__link-icon" width="32" height="12" viewBox="0 0 32 12" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path stroke="#000" stroke-width="2" d="M0 6h18" />
+              <path d="m24 6-6.75 5.2V.8L24 6Z" fill="#000" />
+            </svg>
+          </a>
         </div>
 
         <div class="program__weight program__weight--pro">
           <h3 class="program__title">Набор массы</h3>
           <p class="program__description">
-            Заработать авторитет среди дворовых котов<br />
-            и даже собак? Серия Cat Energy Pro поможет<br />
+            Заработать авторитет среди дворовых котов
+            и даже собак? Серия Cat Energy Pro поможет
             вашему коту нарастить необходимые мышцы!
           </p>
-          <a class="program__link" href="">каталог pro</a>
+          <a class="program__link" href="">каталог pro
+            <svg class="program__link-icon" width="32" height="12" viewBox="0 0 32 12" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path stroke="#000" stroke-width="2" d="M0 6h18" />
+              <path d="m24 6-6.75 5.2V.8L24 6Z" fill="#000" />
+            </svg>
+          </a>
         </div>
       </div>
     </section>
@@ -105,26 +125,30 @@
     <section class="example">
       <h2 class="example__title">Живой пример</h2>
       <div class="example__wrapper">
-        <p class="example__description">
-          Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на
-          Cat Energy Slim.<br />
-          Отличный результат без изнуряющих тренировок! При этом он не менял
-          своих привычек и по-<br />
-          прежнему спит по 16 часов в день.
-        </p>
-        <div class="example__stats">
-          <div class="example__stats-wrapper">
-            <span class="example__stats-value">5 КГ</span>
-            <p class="example__stats-text">снижение веса</p>
-          </div>
-          <div class="example__stats-wrapper">
-            <span class="example__stats-value">60 ДНЕЙ</span>
-            <p class="example__stats-text">затрачено времени</p>
+        <div class="example__container">
+          <p class="example__description">
+            Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на
+            Cat Energy Slim.<br />
+            Отличный результат без изнуряющих тренировок! При этом он не менял
+            своих привычек и по-<br />
+            прежнему спит по 16 часов в день.
+          </p>
+          <div class="example__stats">
+            <div class="example__stats-container">
+              <div class="example__stats-wrapper">
+                <span class="example__stats-value">5 КГ</span>
+                <p class="example__stats-text">снижение веса</p>
+              </div>
+              <div class="example__stats-wrapper">
+                <span class="example__stats-value">60 ДНЕЙ</span>
+                <p class="example__stats-text">затрачено времени</p>
+              </div>
+            </div>
+            <p class="example__total">
+              Затраты на питание: <span class="example__amount">15 000 РУБ.</span>
+            </p>
           </div>
         </div>
-        <p class="example__total">
-          Затраты на питание: <span class="example__amount">15 000 РУБ.</span>
-        </p>
         <div class="example__picture">
           <ul class="example__list">
             <li class="example__item">

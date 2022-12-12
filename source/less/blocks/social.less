@@ -1,6 +1,12 @@
 .social__list {
+  margin: 0;
+  padding: 20px 0;
   display: flex;
   column-gap: 24px;
   justify-content: center;
   list-style-type: none;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+  }
 }

@@ -1,0 +1,28 @@
+.logo__mobile {
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.logo__tablet {
+  display: none;
+  margin-right: 94px;
+
+  @media (min-width: @tablet-width) {
+    display: inline-block;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+.logo__desktop {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: inline-block;
+  }
+}

@@ -1,3 +1,38 @@
 .main-header {
-  margin-bottom: 25px;
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: auto 610px;
+  }
+}
+
+.main-header__wrapper {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    padding: 24px 30px 56px;
+    display: grid;
+    grid-template-columns: auto minmax(auto, 1166px);
+    align-items: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 54px 110px 110px;
+    grid-template-columns: auto 610px;
+  }
+}
+
+.main-header__wrapper-logo {
+  padding: 10px 20px 24px;
+  border-bottom: 1px solid #e6e6e6;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+    border-bottom: none;
+  }
 }
