@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Cat Energy</title>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
@@ -13,23 +13,31 @@
 <body class="page-body">
   <header class="main-header">
     <div class="main-header__wrapper">
-      <div class="wrapper-logo">
-        <a class="logo" href="#">
-          <img class="main-header__logo" src="/images/header/cat-logo-mobile.svg" width="191" height="38"
-            alt="Логотип Cat Energy" />
+      <div class="main-header__wrapper-logo logo">
+        <a class="main-header__logo logo__mobile" href="#">
+          <img src="images/header/cat-logo-mobile.svg" width="191" height="38" alt="Логотип Cat Energy" />
         </a>
-
+        <a class="main-header__logo logo__tablet" href="#">
+          <img src="images/header/cat-logo-tablet.svg" width="174" height="52" alt="Логотип Cat Energy" />
+        </a>
+        <a class="main-header__logo logo__desktop" href="#">
+          <img src="images/header/cat-logo-desktop.svg" width="202" height="59" alt="Логотип Cat Energy" />
+        </a>
       </div>
       <nav class="main-nav">
+        <button class="main-nav__toggle" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
         <ul class="main-nav__list">
-          <li class="main-nav__item main-nav__link--current">
-            <a class="main-nav__link" href="index.html">Главная</a>
+          <li class="main-nav__item">
+            <a class="main-nav__link main-nav__link--desktop" href="index.html">Главная</a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
+            <a class="main-nav__link main-nav__link--desktop" href="catalog.html">Каталог продукции</a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__link" href="form.html">Подбор программы</a>
+            <a class="main-nav__link main-nav__link--desktop main-nav__link--current" href="form.html">Подбор
+              программы</a>
           </li>
         </ul>
       </nav>
@@ -108,9 +116,9 @@
 
         <div class="form__comment">
           <h2 class="form__comment-title inner-title">Комментарий</h2>
-          <label for="comment">
-            <textarea class="form_type-field-comment" id="comment" name="comment" cols="38" rows="6"
-              placeholder="Расскажите обо всех повадках кота"></textarea>
+          <label class="form__comment-label" for="form__comment-label">
+            <textarea class="form__comment-label-field-comment" id="form__comment-label" name="comment" cols="38"
+              rows="6" placeholder="Расскажите обо всех повадках кота"></textarea>
           </label>
         </div>
 
@@ -147,8 +155,10 @@
             </li>
           </ul>
         </div>
-        <button class="form__button button" type="submit">Отправить заявку</button>
-        <p class="form__important-fields">* — Обязательные поля</p>
+        <div class="form__extra-container">
+          <button class="form__extra-container-button button" type="submit">Отправить заявку</button>
+          <p class="form__extra-container-fields">* — Обязательные поля</p>
+        </div>
       </form>
     </section>
   </main>
