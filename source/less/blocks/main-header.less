@@ -27,12 +27,43 @@
   }
 }
 
+.main-header--closed .main-nav {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: inherit;
+  }
+}
+
 .main-header__wrapper-logo {
   padding: 10px 20px 24px;
   border-bottom: 1px solid #e6e6e6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
   @media (min-width: @tablet-width) {
     padding: 0;
     border-bottom: none;
   }
+}
+
+.main-header__toggle {
+  display: block;
+  width: 25px;
+  height: 25px;
+  border: none;
+  cursor: pointer;
+  background-image: url("../../images/header/Logo_mobile-toggle.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #ffffff;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.main-header--opened .main-header__wrapper-logo .main-header__toggle {
+  background-image: url("../../images/header/Logo_mobile-closed.svg");
 }

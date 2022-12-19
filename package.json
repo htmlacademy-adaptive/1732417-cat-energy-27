@@ -41,6 +41,7 @@
   },
   "type": "module",
   "dependencies": {
+    "eslint": "^8.30.0",
     "normalize.css": "^8.0.1"
   }
 }
