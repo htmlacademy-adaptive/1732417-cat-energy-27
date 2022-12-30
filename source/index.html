@@ -5,6 +5,10 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Кэт энерджи</title>
+  <link rel="icon" href="images/favicons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="images/favicons/apple-icon-180x180.png">
+  <link rel="icon" href="favicon.ico">
+  <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css" />
 </head>
@@ -12,20 +16,20 @@
 <body class="page__body">
   <header class="main-header">
     <div class="main-header__wrapper main-header--closed">
-      <div class="main-header__wrapper-logo logo">
-        <a class="main-header__logo logo__mobile" href="#">
-          <img src="images/header/cat-logo-mobile.svg" width="191" height="38" alt="Логотип Cat Energy" />
-        </a>
-        <a class="main-header__logo logo__tablet" href="#">
-          <img src="images/header/cat-logo-tablet.svg" width="174" height="52" alt="Логотип Cat Energy" />
-        </a>
-        <a class="main-header__logo logo__desktop" href="#">
-          <img src="images/header/cat-logo-desktop.svg" width="202" height="59" alt="Логотип Cat Energy" />
-        </a>
+      <a class="main-header__wrapper-logo">
+        <picture>
+          <source media="(min-width:1440px)"
+            srcset="images/header/cat-logo-desktopx1.png 1x, images/header/cat-logo-desktopx2.png 2x" width="202"
+            height="59">
+          <source media="(min-width:768px)"
+            srcset="images/header/cat-logo-tabletx1.png 1x, images/header/cat-logo-tabletx2.png 2x" width="174"
+            height="51">
+          <img src="images/header/cat-logo-mobile.svg" width="191" height="38" alt="Логотип Cat Energy">
+        </picture>
         <button class="main-header__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
-      </div>
+      </a>
       <nav class="main-nav">
         <ul class="main-nav__list">
           <li class="main-nav__item">
@@ -50,6 +54,14 @@
           Подобрать программу
         </button>
       </div>
+      <picture>
+        <source media="(min-width: 1440px)"
+          srcset="images/main/intro-chicken-background-desktopx1.png 1x, images/main/intro-chicken-background-desktopx2.png 2x">
+        <source media="(min-width: 768px)"
+          srcset="images/main/intro-chicken-background-tabletx1.png 1x, images/main/intro-chicken-background-tabletx2.png 2x">
+        <img class="intro__picture" width="280" height="270" src="images/main/intro-chicken-backgroundx1.png"
+          srcset="images/main/intro-chicken-backgroundx2.png 2x" alt="Корм со вкусом курицы">
+      </picture>
     </section>
 
     <section class="program">
