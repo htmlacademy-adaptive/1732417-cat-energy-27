@@ -30,7 +30,7 @@ csso()
 
 // HTML
 
- const html = () => {
+const html = () => {
 return gulp.src('source/*.html')
 .pipe(htmlmin({ collapseWhitespace: true }))
 .pipe(gulp.dest('build'));
@@ -52,7 +52,7 @@ return gulp.src('source/images/**/*.{png,jpg}')
 .pipe(gulp.dest('build/img'))
 }
 
- const copyImages = () => {
+const copyImages = () => {
 return gulp.src('source/images/**/*.{png,jpg}')
 .pipe(gulp.dest('build/img'))
 }
@@ -69,7 +69,7 @@ webp: {}
 
 // SVG
 
- const svg = () =>
+const svg = () =>
 gulp.src(['source/images/**/*.svg', '!source/images/favicons/*.svg', '!source/images/sprite.svg'])
 .pipe(svgo())
 .pipe(gulp.dest('build/img'));
@@ -86,7 +86,7 @@ inlineSvg: true
 
 // Copy
 
- const copy = (done) => {
+const copy = (done) => {
 gulp.src([
 'source/fonts/**/*.{woff2,woff}',
 'source/*.ico',
