@@ -1,7 +1,13 @@
 .main-nav {
   text-align: center;
 
+  @media (min-width: @tablet-width) {
+    display: block;
+    margin-left: 93px;
+  }
+
   @media (min-width: @desktop-width) {
+    margin-left: 170px;
     z-index: 2;
     color: #ffffff;
   }
@@ -43,22 +49,56 @@
 .main-nav__item {
   position: relative;
   border-bottom: 1px solid #e6e6e6;
-  padding: 24px 0 24px;
+  padding: 28px 0 17px 0;
 
   @media (min-width: @tablet-width) {
     border-bottom: none;
     padding-bottom: 12px;
+    padding-top: 15px;
   }
 }
 
-.main-nav__link--desktop {
+.main-nav__link--current {
+  @media (min-width: @tablet-width) {
+    padding-bottom: 5px;
+    border-bottom: 2px solid #68b738;
+  }
+
   @media (min-width: @desktop-width) {
+    border-color: #ffffff;
+  }
+}
+
+.main-nav__list--dark-color {
+  @media (min-width: @tablet-width) {
     color: #000000;
   }
 }
 
-.main-nav__link--desktop.main-nav__link--current {
+.main-nav--form-tablet {
+  @media (min-width: @tablet-width) {
+    margin-left: 96px;
+  }
+
   @media (min-width: @desktop-width) {
-    border-bottom: 2px solid #68b738;
+    margin-left: 170px;
+  }
+}
+
+.main-nav__link:hover {
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.main-nav__link:active {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+@media (min-width: @desktop-width) {
+  .main-nav__link--index:hover {
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  .main-nav__link--index:active {
+    color: rgba(255, 255, 255, 0.4);
   }
 }
