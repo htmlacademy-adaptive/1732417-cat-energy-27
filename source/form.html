@@ -15,27 +15,29 @@
 
 <body class="page-body">
   <header class="main-header">
-    <div class="main-header__wrapper main-header--closed"><a class="main-header__wrapper-logo">
-        <picture class="main-header__picture">
-          <source media="(min-width:1440px)"
-            srcset="images/header/cat-logo-desktopx1.png, images/header/cat-logo-desktopx2.png 2x" width="202"
-            height="59">
-          <source media="(min-width:768px)"
-            srcset="images/header/cat-logo-tabletx1.png, images/header/cat-logo-tabletx2.png 2x" width="174"
-            height="51"><img src="images/header/cat-logo-mobile.svg" width="191" height="38" alt="Логотип Cat Energy">
-        </picture><button class="main-header__toggle" type="button"><span class="visually-hidden">Открыть
-            меню</span></button>
-      </a>
-      <nav class="main-nav main-nav--form-tablet">
-        <ul class="main-nav__list main-nav__list--dark-color">
-          <li class="main-nav__item"><a class="main-nav__link" href="index.html">Главная</a>
-          </li>
-          <li class="main-nav__item"><a class="main-nav__link" href="catalog.html">Каталог
-              продукции</a></li>
-          <li class="main-nav__item"><a class="main-nav__link main-nav__link--current" href="form.html">Подбор
-              программы</a></li>
-        </ul>
-      </nav>
+    <div class="main-header-container">
+      <div class="main-header__wrapper main-header--closed"><a class="main-header__wrapper-logo">
+          <picture class="main-header__picture">
+            <source media="(min-width:1440px)"
+              srcset="images/header/cat-logo-desktopx1.png, images/header/cat-logo-desktopx2.png 2x" width="202"
+              height="59">
+            <source media="(min-width:768px)"
+              srcset="images/header/cat-logo-tabletx1.png, images/header/cat-logo-tabletx2.png 2x" width="174"
+              height="51"><img src="images/header/cat-logo-mobile.svg" width="191" height="38" alt="Логотип Cat Energy">
+          </picture><button class="main-header__toggle" type="button"><span class="visually-hidden">Открыть
+              меню</span></button>
+        </a>
+        <nav class="main-nav main-nav--form-tablet">
+          <ul class="main-nav__list main-nav__list--dark-color">
+            <li class="main-nav__item"><a class="main-nav__link" href="index.html">Главная</a>
+            </li>
+            <li class="main-nav__item"><a class="main-nav__link" href="catalog.html">Каталог
+                продукции</a></li>
+            <li class="main-nav__item"><a class="main-nav__link main-nav__link--current" href="form.html">Подбор
+                программы</a></li>
+          </ul>
+        </nav>
+      </div>
     </div>
   </header>
   <main>
@@ -158,7 +160,8 @@
     <section class="address">
       <h2 class="visually-hidden">Контакты для сотрудничества</h2>
       <div class="address__wrapper">
-        <div class="address__partnership"><strong class="partnership__description">приглашаем<br>к
+        <div class="address__partnership address__partnership--catalog-bg"><strong
+            class="partnership__description">приглашаем<br>к
             сотрудничеству<br>дилеров!</strong>
           <address class="partnership__address">
             <p class="partnership__address--street">ул. Большая<br>Конюшенная, д. 19/8</p>

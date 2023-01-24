@@ -1,3 +1,13 @@
+.main-footer {
+  @media (min-width: @desktop-width) {
+    background-color: rgb(242, 242, 242);
+  }
+}
+
+.main-footer__container {
+  background-color: @program-bg-color;
+}
+
 .main-footer__wrapper {
   padding: 0 20px;
   display: grid;
@@ -5,16 +15,20 @@
   grid-template-rows: 84px 62px 94px;
   align-items: center;
   justify-content: center;
-  background-color: @program-bg-color;
 
   @media (min-width: @tablet-width) {
     display: flex;
     justify-content: space-between;
+    max-width: 768px;
+    margin: 0 auto;
     padding: 41px 30px 31px;
+    background-color: #f2f2f2;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 50px 110px;
+    padding: 50px 0;
+    max-width: 1221px;
+    margin: 0 auto;
   }
 }
 

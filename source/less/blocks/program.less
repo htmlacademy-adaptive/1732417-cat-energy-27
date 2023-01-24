@@ -17,6 +17,11 @@
 }
 
 .program__wrapper {
+  @media (min-width: @tablet-width) {
+    max-width: 768px;
+    margin: 0 auto;
+  }
+
   @media (min-width: @desktop-width) {
     display: grid;
     grid-template-columns: 570px 570px;

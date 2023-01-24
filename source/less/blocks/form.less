@@ -3,13 +3,15 @@
   margin-bottom: 32px;
 
   @media (min-width: @tablet-width) {
+    max-width: 768px;
+    margin: 0 auto 14px;
     padding: 58px 69px;
-    margin-bottom: 14px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 82px;
-    padding: 0 110px;
+    max-width: 1221px;
+    margin: 0 auto 82px;
+    padding: 0;
   }
 }
 
@@ -339,7 +341,7 @@
   position: absolute;
   top: 55%;
   height: 2px;
-  width: 100%;
+  width: 10000%;
   background-color: #67b737;
   left: calc(42% + 25px);
 
@@ -403,7 +405,7 @@
     position: absolute;
     top: 59%;
     height: 2px;
-    width: 100%;
+    width: 10000%;
     background-color: #67b737;
     left: calc(49% + 27px);
   }

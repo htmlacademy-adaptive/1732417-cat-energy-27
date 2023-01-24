@@ -10,6 +10,17 @@
   }
 }
 
+.main-header-container {
+  @media (min-width: @tablet-width) {
+    max-width: 768px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 1221px;
+  }
+}
+
 .main-header__wrapper {
   display: flex;
   flex-direction: column;
@@ -22,7 +33,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding: 53px 110px 75px;
+    padding: 53px 0 75px;
     grid-template-columns: auto 650px;
   }
 }
