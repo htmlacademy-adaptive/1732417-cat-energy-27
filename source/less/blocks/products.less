@@ -1,16 +1,17 @@
 .products {
   @media (min-width: @tablet-width) {
-    background-color: #f2f2f2;
+    background: linear-gradient(to top, #f2f2f2 100%, #ffffff 30%);
   }
 }
 
 .products__card {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  margin-bottom: 10px;
 
   @media (min-width: @tablet-width) {
     position: relative;
-    margin-bottom: 33px;
+    margin-bottom: 32px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -20,6 +21,10 @@
 .products__info {
   @media (min-width: @tablet-width) {
     margin-top: 161px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 163px;
   }
 }
 
@@ -34,6 +39,8 @@
 .products__info-link {
   display: block;
   max-width: 77px;
+  margin-top: 23px;
+  margin-bottom: 14px;
   text-decoration: none;
 
   @media (min-width: @tablet-width) {
@@ -41,6 +48,12 @@
     padding: 0 20px;
     margin: 0 auto 21px;
     text-align: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 24px;
+
+    padding: 0 2px 0 8px;
   }
 }
 
@@ -65,6 +78,7 @@
 .products__info-list {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  margin: 0;
   font-family: "Lato", "Arial", sans-serif;
   font-size: 12px;
   line-height: 16px;
@@ -73,11 +87,14 @@
   @media (min-width: @tablet-width) {
     font-size: 16px;
     margin: 0;
-    grid-row-gap: 16px;
+    grid-row-gap: 5px;
   }
 }
 
 .products__info-value {
+  margin: 0;
+  text-align: right;
+
   @media (min-width: @tablet-width) {
     margin: 0;
     border-bottom: 1px solid #cdcdcd;
@@ -103,16 +120,46 @@
 .products__info-category {
   @media (min-width: @tablet-width) {
     border-bottom: 1px solid #cdcdcd;
-    padding-bottom: 9px;
+    padding: 0;
   }
 }
 
 .products__image-link {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
   text-align: center;
+  margin-top: 32px;
 
   @media (min-width: @tablet-width) {
     position: absolute;
+    margin: 0;
+    flex-direction: row;
+    justify-content: center;
     align-self: center;
     top: -13%;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: -17%;
+  }
+}
+
+.products__image-link--big {
+  @media (min-width: @tablet-width) {
+    top: -23%;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: -80px;
+  }
+}
+
+.products__card--small {
+  margin-bottom: 19px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 32px;
   }
 }

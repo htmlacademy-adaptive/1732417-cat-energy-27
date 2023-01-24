@@ -1,9 +1,43 @@
 .advantages {
   margin-bottom: 49px;
-  padding: 0 30px;
+  padding: 0 20px;
+
+  @media (min-width: @tablet-width) {
+    position: relative;
+    margin-bottom: 120px;
+    padding: 0;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      background-color: #e6e6e6;
+      bottom: -104px;
+    }
+  }
 
   @media (min-width: @desktop-width) {
-    padding: 0 110px;
+    margin-bottom: 27px;
+    padding: 0 80px;
+
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.advantages__wrapper {
+  @media (min-width: @tablet-width) {
+    max-width: 768px;
+    margin: 0 auto;
+    padding: 0 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+    margin: 0 auto;
+    max-width: 1221px;
   }
 }
 
@@ -35,7 +69,7 @@
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    column-gap: 57px;
+    column-gap: 61px;
     row-gap: 134px;
   }
 
@@ -47,18 +81,22 @@
 }
 
 .advantages__item {
-  padding-left: 100px;
+  padding-top: 4px;
+  padding-left: 80px;
   min-width: 60px;
   min-height: 60px;
+  counter-increment: my-awesome-counter;
 
   @media (min-width: @tablet-width) {
     display: block;
     min-width: 230px;
     max-width: 280px;
-    padding: 0;
+    padding: 0 13px 0 0;
   }
 
   @media (min-width: @desktop-width) {
+    position: relative;
+    padding: 0;
     min-width: 230px;
     min-height: 280px;
   }
@@ -73,7 +111,7 @@
   color: #444444;
 
   @media (min-width: @tablet-width) {
-    margin-top: 151px;
+    margin-top: 111px;
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
@@ -83,6 +121,8 @@
 .advantages__item--icon-one {
   background: url("../images/main/icon-program-least.svg") no-repeat left;
   background-size: 60px 60px;
+  background-position-x: 1px;
+  background-position-y: 3px;
 
   @media (min-width: @tablet-width) {
     background-image: none;
@@ -90,12 +130,24 @@
     &::before {
       content: "";
       position: absolute;
-      left: 0;
-      background-image: url("../images/main/icon-program-least.svg");
-      background-size: 80px 80px;
+      background-image: url("../images/main/icon_leaf.svg");
+      background-position: 50% 50%;
+      background-color: #68b738;
       background-repeat: no-repeat;
       width: 80px;
       height: 80px;
+    }
+
+    &::after {
+      content: ""counter(my-awesome-counter);
+      position: absolute;
+      font-family: "Oswald", sans-serif;
+      font-size: 280px;
+      line-height: 280px;
+      color: #f2f2f2;
+      top: -39px;
+      left: 118px;
+      z-index: -2;
     }
   }
 }
@@ -103,6 +155,8 @@
 .advantages__item--icon-two {
   background: url("../images/main/icon-program-fast_cook.svg") no-repeat left;
   background-size: 60px 60px;
+  background-position-x: 1px;
+  background-position-y: 3px;
 
   @media (min-width: @tablet-width) {
     background-image: none;
@@ -111,11 +165,30 @@
       content: "";
       position: absolute;
       top: 0;
-      background-image: url("../images/main/icon-program-fast_cook.svg");
-      background-size: 80px 80px;
+      background-image: url("../images/main/icon-cook.svg");
+      background-position: 50% 50%;
+      background-color: #68b738;
       background-repeat: no-repeat;
       width: 80px;
       height: 80px;
+    }
+
+    &::after {
+      content: ""counter(my-awesome-counter);
+      position: absolute;
+      font-family: "Oswald", sans-serif;
+      font-size: 280px;
+      line-height: 280px;
+      color: #f2f2f2;
+      top: -39px;
+      right: 77px;
+      z-index: -2;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &::after {
+      left: 112px;
     }
   }
 }
@@ -123,6 +196,8 @@
 .advantages__item--icon-three {
   background: url("../images/main/icon-program-cutlery.svg") no-repeat left;
   background-size: 60px 60px;
+  background-position-x: 1px;
+  background-position-y: 3px;
 
   @media (min-width: @tablet-width) {
     background-image: none;
@@ -130,18 +205,36 @@
     &::before {
       content: "";
       position: absolute;
-      top: 357px;
-      background-image: url("../images/main/icon-program-cutlery.svg");
-      background-size: 80px 80px;
+      background-image: url("../images/main/icon_eat.svg");
+      background-position: 50% 50%;
+      background-color: #68b738;
       background-repeat: no-repeat;
       width: 80px;
       height: 80px;
     }
+
+    &::after {
+      content: ""counter(my-awesome-counter);
+      position: absolute;
+      font-family: "Oswald", sans-serif;
+      font-size: 280px;
+      line-height: 280px;
+      color: #f2f2f2;
+      top: 279px;
+      left: 113px;
+      z-index: -2;
+    }
   }
 
   @media (min-width: @desktop-width) {
+    &::after {
+      top: -39px;
+      right: 322px;
+      left: 116px;
+    }
+
     &::before {
-      top: 0;
+      background-position: 56% 51%;
     }
   }
 }
@@ -149,6 +242,8 @@
 .advantages__item--icon-four {
   background: url("../images/main/icon-program-clock.svg") no-repeat left;
   background-size: 60px 60px;
+  background-position-x: 1px;
+  background-position-y: 3px;
 
   @media (min-width: @tablet-width) {
     background-image: none;
@@ -156,18 +251,34 @@
     &::before {
       content: "";
       position: absolute;
-      top: 357px;
-      background-image: url("../images/main/icon-program-clock.svg");
-      background-size: 80px 80px;
+      background-image: url("../images/main/icon-clock.svg");
+      background-position: 50% 50%;
+      background-color: #68b738;
       background-repeat: no-repeat;
       width: 80px;
       height: 80px;
     }
+
+    &::after {
+      content: ""counter(my-awesome-counter);
+      position: absolute;
+      font-family: "Oswald", sans-serif;
+      font-size: 280px;
+      line-height: 280px;
+      color: #f2f2f2;
+      top: 278px;
+      right: 73px;
+      z-index: -2;
+    }
   }
 
   @media (min-width: @desktop-width) {
-    &::before {
-      top: 0;
+    padding-left: 5px;
+
+    &::after {
+      top: -39px;
+      right: -4px;
+      left: auto;
     }
   }
 }
