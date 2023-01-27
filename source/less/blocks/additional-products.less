@@ -1,10 +1,11 @@
 .additional-products {
   position: relative;
   padding: 25px 20px 0;
-  margin-bottom: 35px;
+  margin-bottom: 37px;
 
   @media (min-width: @tablet-width) {
     padding: 0;
+    margin-bottom: 0;
   }
 }
 
@@ -13,19 +14,42 @@
   content: "";
   height: 2px;
   width: 100%;
-  top: 41px;
+  top: 60px;
   background-color: #68b738;
+
+  @media (min-width: @tablet-width) {
+    top: 42px;
+  }
 }
 
 .additional-products__wrapper {
-  padding-top: 85px;
+  padding-top: 79px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    height: 1px;
+    background-color: #ebebeb;
+    top: 18px;
+    left: -7%;
+    right: -10%;
+
+    @media (min-width: @desktop-width) {
+      display: none;
+    }
+  }
 
   @media (min-width: @tablet-width) {
-    padding: 85px 30px;
+    max-width: 768px;
+    margin: 0 auto;
+    padding: 123px 30px 77px;
+    position: relative;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 85px 110px;
+    max-width: 1221px;
+    margin: 0 auto;
+    padding: 85px 0 17px 0;
     display: grid;
     grid-template-columns: 1fr 245px;
     align-items: center;
@@ -37,7 +61,7 @@
   position: absolute;
   background-color: #ffffff;
   margin: 0;
-  top: 25px;
+  top: 45px;
   padding-right: 21px;
   font-weight: 400;
   font-size: 24px;
@@ -45,33 +69,33 @@
 
   @media (min-width: @tablet-width) {
     top: 20px;
-    padding-left: 37px;
     padding-right: 37px;
+    padding-left: 35px;
+    left: 32px;
     font-size: 36px;
     line-height: 36px;
   }
 
   @media (min-width: @desktop-width) {
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-right: 35px;
+    left: -34px;
   }
 }
 
 .additional-products__list {
-  padding: 0;
-  padding-top: 13px;
-  margin: 0;
-  margin-bottom: 35px;
+  padding: 13px 0 0 0;
+  margin: 0 0 35px;
   list-style-type: none;
   border-top: 1px solid #cdcdcd;
 
   @media (min-width: @tablet-width) {
     border: none;
+    margin-bottom: 69px;
   }
 
   @media (min-width: @desktop-width) {
     padding: 0;
-    margin-top: 81px;
+    margin-top: 50px;
   }
 }
 
@@ -79,27 +103,33 @@
   padding-bottom: 19px;
   margin-bottom: 12px;
   display: grid;
-  grid-template-rows: 30px 30px 40px;
+  grid-template-rows: 30px 27px 40px;
   border-bottom: 1px solid #cdcdcd;
 
   @media (min-width: @tablet-width) {
     margin: 0;
-    padding: 26px 38px 28px;
+    padding: 26px 38px;
     display: grid;
     grid-template-columns: 60% 40%;
     grid-template-rows: auto auto;
-    grid-row-gap: 25px;
+    grid-row-gap: 20px;
     border: 1px solid #cdcdcd;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 15px 0 17px;
+    padding: 17px 0 14px;
     border: none;
     border-top: 1px solid #cdcdcd;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 274px 300px 241px;
     grid-template-rows: auto;
     grid-column-gap: 40px;
     align-items: center;
+  }
+}
+
+.additional-products__item:last-of-type {
+  @media (min-width: @desktop-width) {
+    border-bottom: 1px solid #cdcdcd;
   }
 }
 
@@ -122,7 +152,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  font-family: "Lato", "Arial", sans-serif;
+  font-family: "Lato", "Helvetica", sans-serif;
   color: #444444;
   font-size: 14px;
   line-height: 14px;
@@ -132,11 +162,14 @@
     flex-wrap: wrap;
     justify-content: flex-end;
     font-size: 16px;
-    line-height: 20px;
+    line-height: 25px;
   }
 
   @media (min-width: @desktop-width) {
+    line-height: 20px;
     justify-content: space-between;
+    padding-left: 12px;
+    padding-top: 3px;
   }
 }
 
@@ -145,12 +178,13 @@
   line-height: 20px;
 
   @media (min-width: @tablet-width) {
+    padding: 10px 26px;
     grid-column-start: 1;
     grid-column-end: -1;
     font-size: 16px;
   }
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @desktop-width) {
     grid-column-start: auto;
     grid-column-end: auto;
   }
@@ -159,25 +193,52 @@
 .additional-products__banner {
   position: relative;
   min-height: 290px;
-  background: url("../images/main/gift-aside-bg.jpg") center no-repeat;
-  background-size: 100% auto;
+  background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../images/catalog/mobile/gift-aside-mobile.png");
+  background-repeat: no-repeat;
+  background-position: 50% 60%;
+  background-size: cover;
+
+  @media (min-resolution: 2dppx) {
+    background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../images/catalog/mobile/gift-aside-mobile@x2.png");
+  }
 
   @media (min-width: @tablet-width) {
+    background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../images/catalog/tablet/gift-aside-bg-tablet.png");
     min-height: 200px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../images/catalog/tablet/gift-aside-bg-tablet@x2.png");
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 290px;
+    background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../images/catalog/mobile/gift-aside-mobile.png");
+    margin-bottom: 19px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../images/catalog/mobile/gift-aside-mobile@x2.png");
+    }
   }
 }
 
 .additional-products__banner-text {
   margin: 0;
   padding: 187px 61px 43px 58px;
-  font-family: "Lato", "Arial", sans-serif;
+  font-family: "Lato", "Helvetica", sans-serif;
   font-size: 16px;
   line-height: 20px;
   color: #ffffff;
   text-align: center;
 
   @media (min-width: @tablet-width) {
-    padding: 70px 20% 70px 60%;
+    padding: 71px 117px 41px 423px;
+    text-align: left;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 187px 32px 0 30px;
+    text-align: center;
   }
 }
 
@@ -194,6 +255,23 @@
   color: #ffffff;
 
   @media (min-width: @tablet-width) {
-    left: 116px;
+    left: 118px;
+    top: 57px;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 124px;
+  }
+}
+
+.additional-products__info-item-price {
+  @media (min-width: @tablet-width) {
+    padding-left: 52px;
+    margin: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 0;
+    padding-right: 4px;
   }
 }

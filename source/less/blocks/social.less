@@ -1,6 +1,6 @@
 .social__list {
   margin: 0;
-  padding: 20px 0;
+  padding: 0;
   display: flex;
   column-gap: 24px;
   justify-content: center;
@@ -9,4 +9,12 @@
   @media (min-width: @tablet-width) {
     padding: 0;
   }
+}
+
+.social__link:hover .social__link-picture {
+  fill: #68b738;
+}
+
+.social__link:active .social__link-picture {
+  opacity: 0.3;
 }

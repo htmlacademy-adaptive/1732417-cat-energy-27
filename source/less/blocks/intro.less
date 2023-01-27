@@ -3,45 +3,85 @@
   text-align: center;
   margin-bottom: 20px;
 
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 302px;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #444444;
+    background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../images/main/intro-cat-background.webp");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 50%;
+    z-index: -1;
+
+    @media (min-resolution: 2dppx) {
+      background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../images/main/intro-cat-background@2.webp");
+    }
+  }
+
   @media (min-width: @tablet-width) {
+    margin-top: 55px;
     margin-bottom: 0;
     text-align: inherit;
+    background-image: none;
+
+    &::before {
+      background: #ffffff;
+    }
   }
 
   @media (min-width: @desktop-width) {
-    padding-left: 190px;
+    margin-top: 35px;
+    padding-left: 162px;
 
-    &::after {
-      content: "";
-      position: absolute;
-      min-width: 720px;
-      min-height: 694px;
-      top: -230px;
-      right: 0;
-      z-index: 1;
-      background-image: url("../images/header/cat-green-bg.png");
-      background-color: #68b738;
+    &::before {
+      width: 50%;
+      height: 694px;
+      top: -224px;
+      left: 50%;
+      background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../images/main/intro-cat-background-desktop.webp");
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      @media (min-resolution: 2dppx) {
+        background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../images/main/intro-cat-background-desktop@2.webp");
+      }
     }
   }
 }
 
 .intro__wrapper {
-  background-image:
-    linear-gradient(to right, rgba(104, 183, 56, 0.85) 0, rgba(104, 183, 56, 0.85) 100%),
-    url("../images/main/intro-cat-background.png");
-  background-repeat: no-repeat;
-  background-position-y: -150px, 0, 0;
-  background-position-x: center;
-  background-size: 100%, 100%, 285px;
-
   @media (min-width: @tablet-width) {
     background-image: none;
   }
 }
 
+.intro__container {
+  @media (min-width: @tablet-width) {
+    max-width: 768px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 1221px;
+    margin: 0 auto;
+  }
+}
+
+.intro__picture-box {
+  @media (min-width: @tablet-width) {
+    margin-left: 30px;
+  }
+}
+
 .intro__picture {
   position: absolute;
-  top: 30%;
+  top: 35%;
   left: calc(50% - 140px);
 
   @media (min-width: @tablet-width) {
@@ -53,8 +93,8 @@
   @media (min-width: @desktop-width) {
     position: absolute;
     z-index: 2;
-    top: -85px;
-    left: 575px;
+    top: -83px;
+    left: 367px;
     width: 552px;
     height: 499px;
     background-color: transparent;
@@ -63,6 +103,7 @@
 
 .intro__title {
   margin: 0 auto 25px;
+  padding-top: 27px;
   font-style: normal;
   font-weight: 400;
   font-size: 36px;
@@ -72,16 +113,19 @@
 
   @media (min-width: @tablet-width) {
     margin-bottom: 40px;
-    margin-left: 117px;
+    margin-left: 118px;
+    padding: 0;
     font-weight: 400;
     font-size: 60px;
-    line-height: 60px;
+    line-height: 63px;
     color: #000000;
     text-align: left;
   }
 
   @media (min-width: @desktop-width) {
     margin-left: 0;
+    margin-bottom: 40px;
+    line-height: 60px;
   }
 }
 
@@ -97,7 +141,7 @@
   text-transform: uppercase;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 49px;
+    margin-bottom: 20px;
     margin-left: 119px;
     font-size: 20px;
     line-height: 20px;
@@ -112,10 +156,18 @@
 }
 
 .intro__button {
-  margin: 0 20px;
+  display: block;
+  margin: 0 auto;
+  width: 87%;
+  text-decoration: none;
 
   @media (min-width: @tablet-width) {
+    position: absolute;
+    top: calc(30% - 11px);
+    left: 0;
+    width: auto;
     margin-left: 120px;
+    padding: 17px 28px;
     font-size: 20px;
     line-height: 20px;
   }
@@ -123,5 +175,8 @@
   @media (min-width: @desktop-width) {
     margin: 0;
     margin-left: 0;
+    top: calc(96% - 12px);
+    left: 0;
+    padding: 20px 30px;
   }
 }
