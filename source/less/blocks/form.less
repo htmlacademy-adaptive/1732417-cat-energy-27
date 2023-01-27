@@ -154,6 +154,11 @@
     outline: 1px solid #bababa;
   }
 
+  &:focus .control__control-mark,
+  &:focus .control__checkbox {
+    outline: 2px solid #444444;
+  }
+
   &:disabled .control__control-mark,
   &:disabled .control__control-label,
   &:disabled .control__label,
@@ -168,16 +173,17 @@
   }
 }
 
-.form_type-field {
+.form__type-field {
   width: 100%;
   padding: 13px 20px 13px;
   border: 0;
   outline: 1px solid #e7e7e7;
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
   color: #444444;
+  appearance: none;
 
   &:hover {
     outline: 1px solid #cdcdcd;
@@ -185,10 +191,6 @@
 
   &:active {
     outline: 2px solid #444444;
-  }
-
-  &:invalid {
-    outline: 2px solid #ff8282;
   }
 
   &:invalid + .form__icon-input path {
@@ -209,6 +211,11 @@
     font-size: 20px;
     line-height: 32px;
   }
+}
+
+.form__type-field[type="number"]::-webkit-inner-spin-button,
+.form__type-field[type="number"]::-webkit-outer-spin-button {
+  appearance: none;
 }
 
 .form__item-label--email,
@@ -289,7 +296,7 @@
   }
 }
 
-.form_type-field--contacts {
+.form__type-field--contacts {
   padding: 14px 15px;
 
   @media (min-width: @tablet-width) {
@@ -450,7 +457,7 @@
   padding: 9px 15px 13px 15px;
   border: 0;
   outline: 1px solid #e7e7e7;
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -497,7 +504,7 @@
   text-transform: uppercase;
 }
 
-.form__extra-item--title {
+.form__extra-item-title {
   display: flex;
   justify-items: center;
   padding: 6px 0 6px 46px;
@@ -538,7 +545,7 @@
 .form__extra-container-fields {
   margin: 0;
   text-align: center;
-  font-family: "Lato", sans-serif;
+  font-family: "Lato", "Helvetica", sans-serif;
   font-size: 14px;
   line-height: 16px;
 

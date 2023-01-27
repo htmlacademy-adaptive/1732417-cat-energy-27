@@ -7,25 +7,27 @@
   <title>HTML Academy: Кэт энерджи</title>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.min.css">
-  <link rel="preload" href="fonts/oswald/oswaldregular.woff2" crossorigin="anonymous">
-  <link rel="preload" href="fonts/oswald/oswaldmedium.woff2" crossorigin="anonymous">
-  <link rel="preload" href="fonts/lato/Lato-Regular.woff2" crossorigin="anonymous">
+  <link rel="preload" as="font" href="fonts/oswald/oswaldregular.woff2" crossorigin="anonymous">
+  <link rel="preload" as="font" href="fonts/oswald/oswaldmedium.woff2" crossorigin="anonymous">
+  <link rel="preload" as="font" href="fonts/lato/Lato-Regular.woff2" crossorigin="anonymous">
 </head>
 
 <body class="page-body">
   <header class="main-header">
     <div class="main-header-container">
-      <div class="main-header__wrapper main-header--closed"><a class="main-header__wrapper-logo">
-          <picture class="main-header__picture">
-            <source media="(min-width:1440px)"
-              srcset="images/header/cat-logo-desktopx1.png, images/header/cat-logo-desktopx2.png 2x" width="202"
-              height="59">
-            <source media="(min-width:768px)"
-              srcset="images/header/cat-logo-tabletx1.png, images/header/cat-logo-tabletx2.png 2x" width="174"
-              height="51"><img src="images/header/cat-logo-mobile.svg" width="191" height="38" alt="Логотип Cat Energy">
-          </picture><button class="main-header__toggle" type="button"><span class="visually-hidden">Открыть
-              меню</span></button>
-        </a>
+      <div class="main-header__wrapper">
+        <div class="main-header__wrapper-logo">
+          <a class="main-header__wrapper-link" href="index.html">
+            <picture class="main-header__picture">
+              <source media="(min-width:1440px)" srcset="images/header/cat-logo-desktop.svg" width="202" height="59">
+              <source media="(min-width:768px)" srcset="images/header/cat-logo-tablet.svg" width="174" height="51">
+              <img src="images/header/cat-logo-mobile.svg" width="191" height="38" alt="Логотип Cat Energy">
+            </picture>
+          </a>
+          <button class="main-header__toggle main-header__toggle-close" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
+        </div>
         <nav class="main-nav">
           <ul class="main-nav__list main-nav__list--dark-color">
             <li class="main-nav__item"><a class="main-nav__link" href="index.html">Главная</a>
@@ -258,28 +260,32 @@
             <dl class="additional-products__info">
               <dt class="additional-products__info-item-weight">1 упаковка (100 г)</dt>
               <dd class="additional-products__info-item-price">200 ₽</dd>
-            </dl><button class="additional-products-button button">Заказать</button>
+            </dl><button class="additional-products-button button" type="button"
+              onclick="location='form.html'">Заказать</button>
           </li>
           <li class="additional-products__item">
             <h3 class="additional-products__item-title">Питьевая вода</h3>
             <dl class="additional-products__info">
               <dt class="additional-products__info-item-weight">5 литров</dt>
               <dd class="additional-products__info-item-price">50 ₽</dd>
-            </dl><button class="additional-products-button button">Заказать</button>
+            </dl><button class="additional-products-button button" type="button"
+              onclick="location='form.html'">Заказать</button>
           </li>
           <li class="additional-products__item">
             <h3 class="additional-products__item-title">Молоко</h3>
             <dl class="additional-products__info">
               <dt class="additional-products__info-item-weight">1 литр</dt>
               <dd class="additional-products__info-item-price">100 ₽</dd>
-            </dl><button class="additional-products-button button">Заказать</button>
+            </dl><button class="additional-products-button button" type="button"
+              onclick="location='form.html'">Заказать</button>
           </li>
           <li class="additional-products__item">
             <h3 class="additional-products__item-title">Витамины</h3>
             <dl class="additional-products__info">
               <dt class="additional-products__info-item-weight">1 упаковка (30 г)</dt>
               <dd class="additional-products__info-item-price">300 ₽</dd>
-            </dl><button class="additional-products-button button">Заказать</button>
+            </dl><button class="additional-products-button button" type="button"
+              onclick="location='form.html'">Заказать</button>
           </li>
         </ul>
         <aside class="additional-products__banner">
@@ -293,12 +299,12 @@
       <h2 class="visually-hidden">Контакты для сотрудничества</h2>
       <div class="address__wrapper address__wrapper--bg">
         <div class="address__partnership-container">
-          <div class="address__partnership address__partnership--catalog-bg"><strong
+          <div class="address__partnership partnership address__partnership--catalog-bg"><strong
               class="partnership__description">приглашаем<br>к
               сотрудничеству<br>дилеров!</strong>
             <address class="partnership__address">
-              <p class="partnership__address--street">ул. Большая<br>Конюшенная, д. 19/8</p>
-              <p class="partnership__address--city">Санкт-Петербург</p>
+              <p class="partnership__address-street">ул. Большая<br>Конюшенная, д. 19/8</p>
+              <p class="partnership__address-city">Санкт-Петербург</p>
             </address>
           </div>
         </div>
@@ -316,24 +322,37 @@
     </section>
     <div class="main-footer__container">
       <div class="main-footer__wrapper">
-        <div class="main-footer__logo logo-footer"><a href="#" class="logo-footer__link"><img
-              src="images/footer/footer-catenergy-text.svg" alt="Cat energy." width="128" height="24"></a></div>
+        <div class="main-footer__logo logo-footer">
+          <a href="#" class="logo-footer__link">
+            <img src="images/footer/footer-catenergy-text.svg" alt="Cat energy." width="128" height="24">
+          </a>
+        </div>
         <div class="main-footer__social social">
           <ul class="social__list">
-            <li class="social__item"><a class="social__link social__link--vkontakte"
-                href="https://vk.com/htmlacademy"><svg class="social__link--picture" width="28" height="22"
-                  fill="#666666">
-                  <use href="images/sprite.svg#icon-vkontakte"></use>
-                </svg></a></li>
+            <li class="social__item">
+              <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
+                <span class="visually-hidden">Вконтакте</span>
+                <svg class="social__link-picture" width="28" height="22" fill="#666666">
+                  <use href="images/sprite.svg#icon-vkontakte">
+                  </use>
+                </svg></a>
+            </li>
             <li class="social-item"><a class="social__link social__link--youtube"
-                href="https://www.youtube.com/user/htmlacademyru"><svg class="social__link--picture" width="28"
-                  height="22" fill="#666666">
-                  <use href="images/sprite.svg#icon-youtube"></use>
+                href="https://www.youtube.com/user/htmlacademyru">
+                <span class="visually-hidden">Ютуб</span>
+                <svg class="social__link-picture" width="28" height="22" fill="#666666">
+                  <use href="images/sprite.svg#icon-youtube">
+                  </use>
                 </svg></a></li>
-            <li class="social-item"><a class="social__link social__link--telegram" href="https://t.me/htmlacademy"><svg
-                  class="social__link--picture" width="28" height="22" fill="#666666">
-                  <use href="images/sprite.svg#icon-telegram"></use>
-                </svg></a></li>
+            <li class="social-item">
+              <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">
+                <span class="visually-hidden">Телеграмм</span>
+                <svg class="social__link-picture" width="28" height="22" fill="#666666">
+                  <use href="images/sprite.svg#icon-telegram">
+                  </use>
+                </svg>
+              </a>
+            </li>
           </ul>
         </div>
         <div class="main-footer__copyright copyright"><a class="copyright__text"

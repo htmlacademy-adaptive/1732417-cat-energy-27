@@ -8,33 +8,40 @@
   <title>Cat Energy</title>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.min.css">
-  <link rel="preload" href="fonts/oswald/oswaldregular.woff2" crossorigin="anonymous">
-  <link rel="preload" href="fonts/oswald/oswaldmedium.woff2" crossorigin="anonymous">
-  <link rel="preload" href="fonts/lato/Lato-Regular.woff2" crossorigin="anonymous">
+  <link rel="preload" as="font" href="fonts/oswald/oswaldregular.woff2" crossorigin="anonymous">
+  <link rel="preload" as="font" href="fonts/oswald/oswaldmedium.woff2" crossorigin="anonymous">
+  <link rel="preload" as="font" href="fonts/lato/Lato-Regular.woff2" crossorigin="anonymous">
 </head>
 
 <body class="page-body">
   <header class="main-header">
     <div class="main-header-container">
-      <div class="main-header__wrapper main-header--closed"><a class="main-header__wrapper-logo">
-          <picture class="main-header__picture">
-            <source media="(min-width:1440px)"
-              srcset="images/header/cat-logo-desktopx1.png, images/header/cat-logo-desktopx2.png 2x" width="202"
-              height="59">
-            <source media="(min-width:768px)"
-              srcset="images/header/cat-logo-tabletx1.png, images/header/cat-logo-tabletx2.png 2x" width="174"
-              height="51"><img src="images/header/cat-logo-mobile.svg" width="191" height="38" alt="Логотип Cat Energy">
-          </picture><button class="main-header__toggle" type="button"><span class="visually-hidden">Открыть
-              меню</span></button>
-        </a>
+      <div class="main-header__wrapper">
+        <div class="main-header__wrapper-logo">
+          <a class="main-header__wrapper-link" href="index.html">
+            <picture class="main-header__picture">
+              <source media="(min-width:1440px)" srcset="images/header/cat-logo-desktop.svg" width="202" height="59">
+              <source media="(min-width:768px)" srcset="images/header/cat-logo-tablet.svg" width="174" height="51">
+              <img src="images/header/cat-logo-mobile.svg" width="191" height="38" alt="Логотип Cat Energy">
+            </picture>
+          </a>
+          <button class="main-header__toggle main-header__toggle-close" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
+        </div>
         <nav class="main-nav main-nav--form-tablet">
           <ul class="main-nav__list main-nav__list--dark-color">
-            <li class="main-nav__item"><a class="main-nav__link" href="index.html">Главная</a>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="index.html">Главная</a>
             </li>
-            <li class="main-nav__item"><a class="main-nav__link" href="catalog.html">Каталог
-                продукции</a></li>
-            <li class="main-nav__item"><a class="main-nav__link main-nav__link--current" href="form.html">Подбор
-                программы</a></li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="catalog.html">Каталог
+                продукции</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link main-nav__link--current" href="form.html">Подбор
+                программы</a>
+            </li>
           </ul>
         </nav>
       </div>
@@ -47,18 +54,29 @@
       <form class="form__filter" action="https://echo.htmlacademy.ru" method="post">
         <div class="form__wrapper">
           <ul class="form__list form__list--cat-info">
-            <li class="form__item"><label class="form__item-label" for="name"><span class="form__item-text">Имя:*</span>
-                <input class="form_type-field" type="text" id="name" name="name" placeholder="Барсик" required></label>
+            <li class="form__item"><label class="form__item-label" for="name">
+                <span class="form__item-text">Имя:*</span>
+                <input class="form__type-field" type="text" id="name" name="name" placeholder="Барсик" required>
+              </label>
             </li>
-            <li class="form__item"><label class="form__item-label" for="weight"><span class="form__item-text">Вес
-                  (кг):*</span> <input class="form_type-field" type="number" id="weight" name="weight" placeholder="7"
-                  required></label></li>
-            <li class="form__item"><label class="form__item-label" for="age"><span class="form__item-text">Возраст
-                  (лет):</span> <input class="form_type-field" type="number" id="age" name="Years old" placeholder="7"
-                  required></label></li>
+            <li class="form__item">
+              <label class="form__item-label" for="weight">
+                <span class="form__item-text">Вес
+                  (кг):*</span>
+                <!-- Чтобы добавить состояние input error нужно добавить класс "invalid" -->
+                <input class="form__type-field" type="number" id="weight" name="weight" placeholder="7" required>
+              </label>
+            </li>
+            <li class="form__item">
+              <label class="form__item-label" for="age">
+                <span class="form__item-text">Возраст
+                  (лет):</span>
+                <input class="form__type-field" type="number" id="age" name="Years old" placeholder="7" required>
+              </label>
+            </li>
           </ul>
+          <h2 class="visually-hidden">Выберите программу</h2>
           <ul class="form__list form__list--cat-diet">
-            <h2 class="visually-hidden">Выберите программу</h2>
             <li class="form__item">
               <label class="form__item-title control" for="weight-lose-on">
                 <input class="control__input visually-hidden" type="radio" id="weight-lose-on" name="purpose"
@@ -89,7 +107,7 @@
           <div class="form__address">
             <label class="form__item-label form__item-label--email" for="email">
               <span class="form__item-contacts">E-mail:*</span>
-              <input class="form_type-field form_type-field--contacts" type="email" id="email" name="email"
+              <input class="form__type-field form__type-field--contacts" type="email" id="email" name="email"
                 placeholder="кuklachev@gmail.com" required>
               <svg class="form__icon-input" width="20" height="20" viewBox="0 0 20 20" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
@@ -99,7 +117,7 @@
             </label>
             <label class="form__item-label form__item-label--phone" for="phone"><span
                 class="form__item-contacts">Телефон:*</span>
-              <input class="form_type-field form_type-field--contacts" type="text" id="phone" name="phone"
+              <input class="form__type-field form__type-field--contacts" type="text" id="phone" name="phone"
                 placeholder="8 (960) 900-60-90" required>
               <svg class="form__icon-input" width="20" height="20" viewBox="0 0 20 20" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
@@ -120,28 +138,28 @@
           <h2 class="form__extra-title inner-title">Дополнительно</h2>
           <ul class="form__extra-list">
             <li class="form__extra-item">
-              <label class="form__item-title form__extra-item--title">
+              <label class="form__item-title form__extra-item-title control">
                 <input class="control-input visually-hidden" type="checkbox" name="sweetener" checked="checked">
                 <span class="control__checkbox"></span>
                 <span class="control-label">Сахарозаменитель</span>
               </label>
             </li>
             <li class="form__extra-item">
-              <label class="form__item-title form__extra-item--title">
+              <label class="form__item-title form__extra-item-title control">
                 <input class="control-input visually-hidden" type="checkbox" name="water">
                 <span class="control__checkbox"></span>
                 <span class="control-label">питьевая вода</span>
               </label>
             </li>
             <li class="form__extra-item">
-              <label class="form__item-title form__extra-item--title">
+              <label class="form__item-title form__extra-item-title control">
                 <input class="control-input visually-hidden" type="checkbox" name="milk">
                 <span class="control__checkbox"></span>
                 <span class="control-label">молоко</span>
               </label>
             </li>
             <li class="form__extra-item">
-              <label class="form__item-title form__extra-item--title">
+              <label class="form__item-title form__extra-item-title control">
                 <input class="control-input visually-hidden" type="checkbox" name="vitamins">
                 <span class="control__checkbox"></span>
                 <span class="control-label">витамины</span>
@@ -161,12 +179,12 @@
       <h2 class="visually-hidden">Контакты для сотрудничества</h2>
       <div class="address__wrapper address__wrapper--bg">
         <div class="address__partnership-container">
-          <div class="address__partnership address__partnership--catalog-bg"><strong
+          <div class="address__partnership partnership address__partnership--catalog-bg"><strong
               class="partnership__description">приглашаем<br>к
               сотрудничеству<br>дилеров!</strong>
             <address class="partnership__address">
-              <p class="partnership__address--street">ул. Большая<br>Конюшенная, д. 19/8</p>
-              <p class="partnership__address--city">Санкт-Петербург</p>
+              <p class="partnership__address-street">ул. Большая<br>Конюшенная, д. 19/8</p>
+              <p class="partnership__address-city">Санкт-Петербург</p>
             </address>
           </div>
         </div>
@@ -177,31 +195,45 @@
       </div>
     </section>
     <div class="main-footer__wrapper">
-      <div class="main-footer__logo logo-footer"><a href="#" class="main-footer__link"><img
-            src="images/footer/footer-catenergy-text.svg" alt="Cat energy." width="128" height="24"></a></div>
+      <div class="main-footer__logo logo-footer">
+        <a href="#" class="main-footer__link">
+          <img src="images/footer/footer-catenergy-text.svg" alt="Cat energy." width="128" height="24"></a>
+      </div>
       <div class="main-footer__social social">
         <ul class="social__list">
           <li class="social__item">
             <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
-              <svg class="social__link--picture" width="28" height="22">
-                <use href="images/sprite.svg#icon-vkontakte"></use>
+              <span class="visually-hidden">Вконтакте</span>
+              <svg class="social__link-picture" width="28" height="22">
+                <use href="images/sprite.svg#icon-vkontakte">
+
+                </use>
               </svg></a>
           </li>
-          <li class="social-item"><a class="social__link social__link--youtube"
-              href="https://www.youtube.com/user/htmlacademyru"><svg class="social__link--picture" width="28"
-                height="22">
-                <use href="images/sprite.svg#icon-youtube"></use>
-              </svg></a></li>
-          <li class="social-item"><a class="social__link social__link--telegram" href="https://t.me/htmlacademy"><svg
-                class="social__link--picture" width="28" height="22">
+          <li class="social-item">
+            <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
+              <span class="visually-hidden">Ютуб</span>
+              <svg class="social__link-picture" width="28" height="22">
+                <use href="images/sprite.svg#icon-youtube">
+
+                </use>
+              </svg>
+            </a>
+          </li>
+          <li class="social-item">
+            <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">
+              <span class="visually-hidden">Телеграмм</span>
+              <svg class="social__link-picture" width="28" height="22">
                 <use href="images/sprite.svg#icon-telegram"></use>
-              </svg></a></li>
+              </svg>
+            </a>
+          </li>
         </ul>
       </div>
       <div class="main-footer__copyright copyright">
         <a class="copyright__text" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
         <a class="copyright__link copyright__link--logo" href="https://htmlacademy.ru/intensive/adaptive">
-          <svg class="copyright__link--icon" width="27" height="34" viewBox="0 0 27 34" fill="currentColor"
+          <svg class="copyright__link-icon" width="27" height="34" viewBox="0 0 27 34" fill="currentColor"
             xmlns="http://www.w3.org/2000/svg">
             <g clip-path="url(#a)">
               <path

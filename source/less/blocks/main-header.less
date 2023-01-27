@@ -38,7 +38,7 @@
   }
 }
 
-.main-header--closed .main-nav {
+.main-header-closed .main-nav {
   display: none;
 
   @media (min-width: @tablet-width) {
@@ -76,11 +76,15 @@
   }
 }
 
-.main-header--opened .main-header__wrapper-logo .main-header__toggle {
+.main-header__toggle-close {
+  background-image: none;
+}
+
+.main-header-opened .main-header__wrapper-logo .main-header__toggle {
   background-image: url("../images/header/Logo_mobile-closed.svg");
 }
 
-.main-header--opened .main-nav {
+.main-header-opened .main-nav {
   position: absolute;
   z-index: 10;
   left: 0;
